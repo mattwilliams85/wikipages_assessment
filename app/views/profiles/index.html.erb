@@ -1,6 +1,6 @@
 <h1> Hyperdate.com </h1>
 
-<button class="btn btn-success"> New Profile </button>
+<a href="/profiles/new" class="btn btn-success" > New Profile </a>
 
 <h3> - Current Hyperdaters - </h3>
 
@@ -9,5 +9,5 @@
 <% end %>
 
 <% @profiles.each do |profile| %>
-	<li> <%= profile.name %> </li>
+	<li> <a href=""> <%= profile.name %> </a> </li>
 <% end %>
