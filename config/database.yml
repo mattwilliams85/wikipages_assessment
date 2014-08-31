@@ -1,5 +1,5 @@
 development:
-  adapater: postgresql
+  adapter: postgresql
   database: wikipages_development
 
 test:
