@@ -14,10 +14,15 @@ class ProfilesController < ApplicationController
 	def create
 		@profile = Profile.new(params[:profile])
 		if @profile.save
-			redirect_to('/profiles/#{@profile.id}')
+			redirect_to("/profiles/#{@profile.id}")
 		else
 			flash[:alert] = "Unable to create profile:"
-			render('/profiles/new')
+			render('new.html.erb')
 		end
+	end
+
+	def show
+		@profile = Profile.find(params[:id])
+		render('show.html.erb')
 	end
 end
