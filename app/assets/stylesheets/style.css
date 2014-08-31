@@ -10,14 +10,12 @@ body {
 .red {
 	background-color:red;
 	color:white;
-	border-radius:20px;
 	text-align: center;
 }
 
 .blue {
 	background-color:blue;
 	color:white;
-	border-radius:20px;
 	text-align: center;
 }
 
