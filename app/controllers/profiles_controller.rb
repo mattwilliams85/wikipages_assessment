@@ -14,6 +14,7 @@ class ProfilesController < ApplicationController
 	def create
 		@profile = Profile.new(params[:profile])
 		if @profile.save
+			flash[:notice] = "Profile Created Succesfully!"
 			redirect_to("/profiles/#{@profile.id}")
 		else
 			flash[:alert] = "Unable to create profile:"
@@ -39,7 +40,12 @@ class ProfilesController < ApplicationController
 
 	def update
 		@profile = Profile.find(params[:id])
-		@profile.update(params[:profile])
-		redirect_to('/')
+		if @profile.update(params[:profile])
+			flash[:notice] = "Profile Updated Succesfully!"
+			redirect_to('/')
+		else
+			flash[:alert] = "Unable to update profile"
+			redirect_to("/profiles/#{@profile.id}/edit")
+		end
 	end
 end

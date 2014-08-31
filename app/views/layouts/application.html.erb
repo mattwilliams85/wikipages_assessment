@@ -10,11 +10,16 @@
 
 <%if  flash[:alert] %>
 	<div class="red">
-	<% if @profile.errors.any? %>
+		<%= flash[:alert] %>
 		<% @profile.errors.full_messages.each do |message| %>
 			<li> <%= message %> </li>
 		<% end %>
-	<% end %>
+	</div>
+<% end %>
+
+<%if  flash[:notice] %>
+	<div class="blue">
+		<%= flash[:notice] %>
 	</div>
 <% end %>
 
