@@ -1,2 +1,13 @@
 <h1> Hyperdate.com </h1>
 
+<button class="btn btn-success"> New Profile </button>
+
+<h3> - Current Hyperdaters - </h3>
+
+<% if @profiles.first == nil %>
+	<p> < None > </p>
+<% end %>
+
+<% @profiles.each do |profile| %>
+	<li> <%= profile.name %> </li>
+<% end %>
