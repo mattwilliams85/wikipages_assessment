@@ -1,7 +1,8 @@
-class ProfilesController < ApplicationController::Base
+class ProfilesController < ApplicationController
 
-def index
-	render('index.html.erb')
-end
+	def index
+		@profiles = Profile.all
+		render('index.html.erb')
+	end
 
 end
