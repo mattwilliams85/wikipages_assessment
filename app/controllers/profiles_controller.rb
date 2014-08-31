@@ -1,6 +1,7 @@
 class ProfilesController < ApplicationController
 
 	def index
+		@profile = Profile.new
 		@profiles = Profile.all
 		render('index.html.erb')
 	end
