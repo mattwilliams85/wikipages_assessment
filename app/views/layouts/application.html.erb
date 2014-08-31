@@ -9,7 +9,14 @@
 <body>
 
 <div class="container">
-	<%= flash[:alert] %>
+	<div class="red">
+		<%= flash[:alert] %>
+		<% if @profile.errors.any? %>
+			<% @profile.errors.full_messages.each do |message| %>
+				<li> <%= message %> </li>
+			<% end %>
+		<% end %>
+	</div>
 <%= yield %>
 </div>
 </body>
