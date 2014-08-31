@@ -1,14 +1,14 @@
 Wikipage (HyperDate)
 ==============
 
-By Matthew Williams 08/23/14
+By Matthew Williams 08/30/14
 --------------
 
 **About:** 
 
 This project is for the Ruby on Rails (mininimal magic) Assessment at Epicodus.
 
-This project uses the seven restful states to simulate basic profile management on a dating website..
+This project uses the seven restful states to simulate basic profile management on a dating website.
 
 **How to Use:** 
 
