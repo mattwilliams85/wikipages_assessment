@@ -7,5 +7,5 @@
 <% end %>
 
 <% @profiles.each do |profile| %>
-	<li> <a href=""> <%= profile.name %> </a> </li>
+	<li> <a href="/profiles/<%= profile.id %>"> <%= profile.name %> </a> </li>
 <% end %>

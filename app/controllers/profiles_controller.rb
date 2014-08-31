@@ -25,4 +25,10 @@ class ProfilesController < ApplicationController
 		@profile = Profile.find(params[:id])
 		render('show.html.erb')
 	end
+
+	def destroy
+		@profile = Profile.find(params[:id])
+		@profile.destroy
+		redirect_to('/')
+	end
 end

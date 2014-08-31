@@ -4,3 +4,7 @@
 <h3> Ethnicity - <%= @profile.ethnicity %> </h3>
 <h3> Height - <%= @profile.height %> </h3>
 <h3> About - <%= @profile.content %> </h3>
+
+</br>
+
+<a href="/profiles/<%= @profile.id %>/edit">Edit</a> | <a href="/profiles/<%= @profile.id %>" data-method="delete" rel="nofollow">Delete</a>
