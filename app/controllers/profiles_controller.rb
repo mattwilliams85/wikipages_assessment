@@ -31,4 +31,9 @@ class ProfilesController < ApplicationController
 		@profile.destroy
 		redirect_to('/')
 	end
+
+	def edit
+		@profile = Profile.find(params[:id])
+		render('edit.html.erb')
+	end
 end
