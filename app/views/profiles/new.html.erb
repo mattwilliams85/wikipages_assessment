@@ -1,3 +1,9 @@
+<% if @profile.errors.any? %>
+	<% @profile.errors.full_messages.each do |message| %>
+		<li> <%= message %> </li>
+	<% end %>
+<% end %>
+
 <h1> New Profile </h1>
 
 <form action="/profiles" method="post" role="form">
