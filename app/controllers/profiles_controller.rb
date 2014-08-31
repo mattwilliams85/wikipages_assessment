@@ -12,7 +12,7 @@ class ProfilesController < ApplicationController
 	end
 
 	def create
-		@profile = Profile.new(params[:profiles])
+		@profile = Profile.new(params[:profile])
 		if @profile.save
 			redirect_to('/profiles/#{@profile.id}')
 		else
