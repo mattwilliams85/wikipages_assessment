@@ -1,6 +1,7 @@
 <h1> Edit Profile </h1>
 
-<form action="/profiles" method="post" role="form">
+<form action="/profiles/<%= @profile.id %>" method="post" role="form">
+	<input name="_method" type="hidden" value="patch"
 	<div class="form-group col-md-6">
 	  	<label for="profile_name">Name</label>
 	    <input id="profile_name" name="profile[name]" type="text" class="form-control" value="<%= @profile.name %>">

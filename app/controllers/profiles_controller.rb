@@ -36,4 +36,10 @@ class ProfilesController < ApplicationController
 		@profile = Profile.find(params[:id])
 		render('edit.html.erb')
 	end
+
+	def update
+		@profile = Profile.find(params[:id])
+		@profile.update(params[:profile])
+		redirect_to('/')
+	end
 end
